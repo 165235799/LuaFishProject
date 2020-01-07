@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 534766b3b172b3b429dd805561b1037c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: btn-dhf-01
+    21300002: btn-paojiesuo-01
+    21300004: btn-tuichu
+    21300006: btn-yl-01
+    21300008: icon-fd
+    21300010: icon-kuangbao
+    21300012: icon-qtl
+    21300014: icon-suoding
+    21300016: icon-yulei-1
+    21300018: icon-yulei-2
+    21300020: icon-yulei-3
+    21300022: icon-yulei-4
+    21300024: icon-yulei-5
+    21300026: icon-zxjl
+    21300028: icon-zzl
+    21300030: icon_btn_hdlb
+    21300032: icon_btn_xsbg
+    21300034: icon_hycx_hybz
+    21300036: img-ptcd-fp-light
+    21300038: img-ptcd-fp
+    21300040: img-ptcd-hp-light
+    21300042: img-ptcd-hp
+    21300044: img-ptcd-zd-light
+    21300046: img-ptcd-zd
+    21300048: img-tanchu-di
+    21300050: icon_smns_fslb
+    21300052: icon_sqhs_sscb
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: btn-dhf-01
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 749
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn-paojiesuo-01
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 646
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn-tuichu
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 154
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn-yl-01
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 514
+        width: 129
+        height: 130
+      alignment: 9
+      pivot: {x: 0.503876, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-fd
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 638
+        width: 130
+        height: 109
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5963303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-kuangbao
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 881
+        width: 136
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-qtl
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 777
+        width: 106
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5188679, y: 0.5241935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-suoding
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 759
+        width: 136
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-yulei-1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 623
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-yulei-2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 487
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-yulei-3
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 502
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-yulei-4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 351
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-yulei-5
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 378
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-zxjl
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 901
+        width: 125
+        height: 122
+      alignment: 9
+      pivot: {x: 0.48, y: 0.5327869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon-zzl
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 543
+        width: 109
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5321101, y: 0.5241935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_btn_hdlb
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 258
+        width: 124
+        height: 118
+      alignment: 9
+      pivot: {x: 0.47580644, y: 0.5508475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_btn_xsbg
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 245
+        width: 123
+        height: 130
+      alignment: 9
+      pivot: {x: 0.50406504, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_hycx_hybz
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 778
+        width: 125
+        height: 121
+      alignment: 9
+      pivot: {x: 0.512, y: 0.5371901}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_smns_fslb
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 377
+        width: 127
+        height: 123
+      alignment: 9
+      pivot: {x: 0.496063, y: 0.52845526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: icon_sqhs_sscb
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 125
+        height: 120
+      alignment: 9
+      pivot: {x: 0.488, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img-ptcd-fp-light
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 669
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img-ptcd-fp
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 435
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img-ptcd-hp-light
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 327
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img-ptcd-hp
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 219
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img-ptcd-zd-light
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 121
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img-ptcd-zd
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 13
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: img-tanchu-di
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 903
+        width: 245
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5020408, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

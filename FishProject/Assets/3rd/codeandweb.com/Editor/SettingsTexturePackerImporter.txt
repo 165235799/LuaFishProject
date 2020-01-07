@@ -1,0 +1,21 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/Atlas/CommonAtlas.tpsheet
+- Assets/Atlas/HUDAtlas.tpsheet
+- Assets/Atlas/TurretAtlas.tpsheet
+- Assets/Atlas/UIHUDButtons.tpsheet
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+textureFileNames:
+- Assets/Atlas/CommonAtlas.png
+- Assets/Atlas/HUDAtlas.png
+- Assets/Atlas/TurretAtlas.png
+- Assets/Atlas/UIHUDButtons.png
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+normalmapFileNames:
+- 
+- 
+- 
+- 
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+enableDebugOutput: 0
