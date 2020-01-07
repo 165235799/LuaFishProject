@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "Assets\\Lua"
+			"path": "FishProject\\Assets\\Lua"
 		},
 		{
-			"path": "Assets\\ToLua"
+			"path": "FishProject\\Assets\\ToLua"
 		}
 	]
 }
