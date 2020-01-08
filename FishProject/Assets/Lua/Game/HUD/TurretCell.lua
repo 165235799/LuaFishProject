@@ -33,7 +33,6 @@ function TurretCell:Awake(obj)
     Tool.OnClick(self.LessenWeaponValueBtn, function() 
         self:OnClickLessenWeaponValue();
     end)
-
 end
 
 function TurretCell:Show(gamePlayerData)
