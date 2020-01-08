@@ -6,9 +6,9 @@ public class GameHUD : MonoBehaviour
 {
     private void Awake()
     {
-        //GameObject obj = transform.Find("UITurret").gameObject;
-        //if (obj.GetComponent<LuaComponent>() == null)
-        //    obj.AddComponent<LuaComponent>();
+        GameObject obj = transform.Find("UITouch").gameObject;
+        if (obj.GetComponent<LuaComponent>() == null)
+            obj.AddComponent<LuaComponent>();
 
     }
 }

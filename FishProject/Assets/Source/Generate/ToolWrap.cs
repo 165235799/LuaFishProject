@@ -10,6 +10,7 @@ public class ToolWrap
 		L.RegFunction("InstanceObj", InstanceObj);
 		L.RegFunction("DebugLog", DebugLog);
 		L.RegFunction("OnClick", OnClick);
+		L.RegFunction("AddListener", AddListener);
 		L.RegFunction("New", _CreateTool);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.EndClass();
@@ -81,16 +82,16 @@ public class ToolWrap
 		{
 			int count = LuaDLL.lua_gettop(L);
 
-			if (count == 2 && TypeChecker.CheckTypes<UnityEngine.Transform, LuaInterface.LuaFunction>(L, 1))
+			if (count == 2 && TypeChecker.CheckTypes<UnityEngine.GameObject, LuaInterface.LuaFunction>(L, 1))
 			{
-				UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.ToObject(L, 1);
+				UnityEngine.GameObject arg0 = (UnityEngine.GameObject)ToLua.ToObject(L, 1);
 				LuaFunction arg1 = ToLua.ToLuaFunction(L, 2);
 				Tool.OnClick(arg0, arg1);
 				return 0;
 			}
-			else if (count == 2 && TypeChecker.CheckTypes<UnityEngine.GameObject, LuaInterface.LuaFunction>(L, 1))
+			else if (count == 2 && TypeChecker.CheckTypes<UnityEngine.Transform, LuaInterface.LuaFunction>(L, 1))
 			{
-				UnityEngine.GameObject arg0 = (UnityEngine.GameObject)ToLua.ToObject(L, 1);
+				UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.ToObject(L, 1);
 				LuaFunction arg1 = ToLua.ToLuaFunction(L, 2);
 				Tool.OnClick(arg0, arg1);
 				return 0;
@@ -98,6 +99,42 @@ public class ToolWrap
 			else
 			{
 				return LuaDLL.luaL_throw(L, "invalid arguments to method: Tool.OnClick");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int AddListener(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 4 && TypeChecker.CheckTypes<UnityEngine.GameObject, LuaInterface.LuaFunction, LuaInterface.LuaFunction, LuaInterface.LuaFunction>(L, 1))
+			{
+				UnityEngine.GameObject arg0 = (UnityEngine.GameObject)ToLua.ToObject(L, 1);
+				LuaFunction arg1 = ToLua.ToLuaFunction(L, 2);
+				LuaFunction arg2 = ToLua.ToLuaFunction(L, 3);
+				LuaFunction arg3 = ToLua.ToLuaFunction(L, 4);
+				Tool.AddListener(arg0, arg1, arg2, arg3);
+				return 0;
+			}
+			else if (count == 4 && TypeChecker.CheckTypes<UnityEngine.Transform, LuaInterface.LuaFunction, LuaInterface.LuaFunction, LuaInterface.LuaFunction>(L, 1))
+			{
+				UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.ToObject(L, 1);
+				LuaFunction arg1 = ToLua.ToLuaFunction(L, 2);
+				LuaFunction arg2 = ToLua.ToLuaFunction(L, 3);
+				LuaFunction arg3 = ToLua.ToLuaFunction(L, 4);
+				Tool.AddListener(arg0, arg1, arg2, arg3);
+				return 0;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: Tool.AddListener");
 			}
 		}
 		catch (Exception e)

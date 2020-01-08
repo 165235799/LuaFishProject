@@ -10,4 +10,4 @@ function Class.New(base)
 end
 
 
-return Class;
+return Class; 

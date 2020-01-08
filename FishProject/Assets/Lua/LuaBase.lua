@@ -5,7 +5,7 @@ function LuaBase:ctor()
     self.transform = null;
 end
 
-function LuaBase:Awake(gameObject)
+function LuaBase:Awake(obj)
     if(obj == nil) then
         print("obj is nil");
         return 

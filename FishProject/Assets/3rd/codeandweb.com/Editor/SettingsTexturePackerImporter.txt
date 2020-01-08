@@ -1,18 +1,24 @@
 version: 2
 importPivots: 1
 tpsheetFileNames:
+- Assets/Atlas/BulletAtlas.tpsheet
 - Assets/Atlas/CommonAtlas.tpsheet
 - Assets/Atlas/HUDAtlas.tpsheet
+- Assets/Atlas/NetAtlas.tpsheet
 - Assets/Atlas/TurretAtlas.tpsheet
 - Assets/Atlas/UIHUDButtons.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
+- Assets/Atlas/BulletAtlas.png
 - Assets/Atlas/CommonAtlas.png
 - Assets/Atlas/HUDAtlas.png
+- Assets/Atlas/NetAtlas.png
 - Assets/Atlas/TurretAtlas.png
 - Assets/Atlas/UIHUDButtons.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
+- 
 - 
 - 
 - 

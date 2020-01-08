@@ -12,13 +12,6 @@ function UITurret:ctor()
 end
 
 function UITurret:init()
-    -- if(obj == nil) then
-    --     print("obj is nil");
-    --     return 
-    -- end
-
-    -- self.gameObject = obj;
-    -- self.transform = obj.transform;
     self.turretCellPrefab = self.transform:Find("TurretCell");
 
     local noteName = "Seat_";

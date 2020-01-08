@@ -18,7 +18,7 @@ public class LuaComponent : MonoBehaviour
 
     private void Awake()
     {
-        string pathStr = "Game/HUD/UITurret.lua";
+        string pathStr = "Game/HUD/UITouch.lua";
         mLuaTable = GlobalComponent.Instance.Lua.DoFile<LuaTable>(pathStr);
         if (mLuaTable == null)
             Debug.LogError(">>>>not find lua path:" + pathStr);
