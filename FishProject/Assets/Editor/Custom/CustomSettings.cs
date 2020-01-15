@@ -123,6 +123,7 @@ public static class CustomSettings
 
         //My Class
         _GT(typeof(Tool)),
+        _GT(typeof(ResourceLoad)),
 
 #if UNITY_5_3_OR_NEWER && !UNITY_5_6_OR_NEWER
         _GT(typeof(UnityEngine.Experimental.Director.DirectorPlayer)),

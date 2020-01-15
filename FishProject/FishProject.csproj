@@ -247,20 +247,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\ClickListener.cs" />
     <Compile Include="Assets\Script\ConfigurationDefine.cs" />
     <Compile Include="Assets\Script\EnumManager.cs" />
-    <Compile Include="Assets\Script\GameHUD.cs" />
+    <Compile Include="Assets\Script\GameScene\GameHUD.cs" />
     <Compile Include="Assets\Script\GlobalComponent.cs" />
     <Compile Include="Assets\Script\LuaComponent.cs" />
-    <Compile Include="Assets\Script\ResourceLoad.cs" />
-    <Compile Include="Assets\Script\Tool.cs" />
+    <Compile Include="Assets\Script\Tool\ClickListener.cs" />
+    <Compile Include="Assets\Script\Tool\ResourceLoad.cs" />
+    <Compile Include="Assets\Script\Tool\Tool.cs" />
     <Compile Include="Assets\Source\Generate\DelegateFactory.cs" />
     <Compile Include="Assets\Source\Generate\LuaBinder.cs" />
     <Compile Include="Assets\Source\Generate\LuaInterface_DebuggerWrap.cs" />
     <Compile Include="Assets\Source\Generate\LuaInterface_InjectTypeWrap.cs" />
     <Compile Include="Assets\Source\Generate\LuaInterface_LuaInjectionStationWrap.cs" />
     <Compile Include="Assets\Source\Generate\LuaProfilerWrap.cs" />
+    <Compile Include="Assets\Source\Generate\ResourceLoadWrap.cs" />
     <Compile Include="Assets\Source\Generate\ToolWrap.cs" />
     <Compile Include="Assets\Source\Generate\UnityEngine_AnimationBlendModeWrap.cs" />
     <Compile Include="Assets\Source\Generate\UnityEngine_AnimationClipWrap.cs" />

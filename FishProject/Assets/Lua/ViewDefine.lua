@@ -1,4 +1,4 @@
 View =
 {
-    {PrefabStr = "", LuaStr = ""},
+    {UIType = 0, PrefabStr = "", LuaStr = ""},
 }

@@ -23,7 +23,9 @@ end
 
 
 function UITouch:OnClick()
-    Tool.DebugLog(2, ">>>>>>>>>>>>>>>>>>>>OnClick");
+    ResourceLoad.LoadAsset("Assets/Prefab/Game/HUD/Common/Bullet.prefab", self.transform, function(instanceObj)
+    
+    end);
 end
 
 function UITouch:OnClickDownEvent()

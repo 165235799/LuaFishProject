@@ -2,15 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConfigurationDefine : MonoBehaviour {
+public class ConfigurationDefine
+{
+    public const bool IsEditor = true;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public const bool IsAssetBundle = false;
 }
