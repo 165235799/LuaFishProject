@@ -1,9 +1,9 @@
-LuaBase = require("LuaBase")
-Class =  require("Class")
+local LuaBase = require("LuaBase")
+local Class =  require("Class")
 
-local UIHUDMenu =  Class.New(LuaBase);
+local m =  Class.New(LuaBase);
 
-function UIHUDMenu:ctor()
+function m:ctor()
     self.leftMenu = nil
     
     self.closeBtn = nil
@@ -23,12 +23,13 @@ function UIHUDMenu:ctor()
 
 end
 
-function UIHUDMenu:init()
+function m:init()
     self:initLeftMenu();
     self:intRightMenu();
 end
 
-function UIHUDMenu:initLeftMenu()
+----//左边按钮菜单
+function m:initLeftMenu()
     self.leftMenu = self.transform:Find("LeftMenu");
 
     self.closeBtn = self.leftMenu:Find("CloseBtn");
@@ -40,60 +41,111 @@ function UIHUDMenu:initLeftMenu()
     self.HarvestGiftBtn = self.leftMenu:Find("HarvestGiftBtn");
     self.GodTreasureBtn = self.leftMenu:Find("GodTreasureBtn");
 
-    Tool.OnClick(self.closeBtn, function() 
+    LuaTool.OnClick(self.closeBtn, function() 
         --退出渔场按钮
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>退出渔场按钮");
     end)
 
-    Tool.OnClick(self.SevenDaysBtn, function() 
+    LuaTool.OnClick(self.SevenDaysBtn, function() 
         --七天乐
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>七天乐");
+        --测试进入游戏
+        GlobalManager:Instance():enterMatch();
     end)
 
-    Tool.OnClick(self.OnlineReardsBtn, function() 
+    LuaTool.OnClick(self.OnlineReardsBtn, function() 
         --在线奖励
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>在线奖励");
     end)
 
-    Tool.OnClick(self.SeaGiftBtn, function() 
+    LuaTool.OnClick(self.SeaGiftBtn, function() 
         --海底礼包
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>海底礼包");
     end)
 
-    Tool.OnClick(self.SupplyBtn, function() 
+    LuaTool.OnClick(self.SupplyBtn, function() 
         --悬赏补给
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>悬赏补给");
     end)
 
-    Tool.OnClick(self.TreasureBtn, function() 
+    LuaTool.OnClick(self.TreasureBtn, function() 
         --海妖宝藏
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>海妖宝藏");
     end)
 
-    Tool.OnClick(self.HarvestGiftBtn, function() 
+    LuaTool.OnClick(self.HarvestGiftBtn, function() 
         --丰收礼包
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>丰收礼包");
     end)
 
-    Tool.OnClick(self.GodTreasureBtn, function() 
+    LuaTool.OnClick(self.GodTreasureBtn, function() 
         --神兽宝藏
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>神兽宝藏");
     end)
 end
 
+function m:hideLeftMenuBtn()
+    LuaTool.SetGameObjectActive(self.SevenDaysBtn, false);
+    LuaTool.SetGameObjectActive(self.OnlineReardsBtn, false);
+    LuaTool.SetGameObjectActive(self.SeaGiftBtn, false);
+    LuaTool.SetGameObjectActive(self.SupplyBtn, false);
+    LuaTool.SetGameObjectActive(self.TreasureBtn, false);
+    LuaTool.SetGameObjectActive(self.HarvestGiftBtn, false);
+    LuaTool.SetGameObjectActive(self.GodTreasureBtn, false);
+end
 
-function UIHUDMenu:intRightMenu()
+--# matchType @type MatchType 
+function m:setLeftMenuBtn(matchType)
+    self:hideLeftMenuBtn();
+    
+    LuaTool.SetGameObjectActive(self.SevenDaysBtn, true);
+    LuaTool.SetGameObjectActive(self.OnlineReardsBtn, true);
+
+    if(matchType == MatchType.SeaGiftBagType) then
+        LuaTool.SetGameObjectActive(self.SeaGiftBtn, true);
+    elseif(matchType == MatchType.RewardType) then
+        LuaTool.SetGameObjectActive(self.SupplyBtn, true);
+    elseif(matchType == MatchType.TreasureType) then 
+        LuaTool.SetGameObjectActive(self.TreasureBtn, true);
+    elseif(matchType == MatchType.HarvestGiftBag) then
+        LuaTool.SetGameObjectActive(self.HarvestGiftBtn, true);
+    elseif(matchType == MatchType.GodTreasureType) then
+        LuaTool.SetGameObjectActive(self.GodTreasureBtn, true);
+    end
+end
+
+----//右边按钮菜单
+function m:intRightMenu()
     self.rightMenu = self.transform:Find("RightMenu");
-
     self.PhoneBtn = self.rightMenu:Find("Phone/BtnImg");
     self.TurretBtn = self.rightMenu:Find("Turret/BtnImg");
     self.TorpedoBtn = self.rightMenu:Find("Torpedo/BtnImg");
 
-    Tool.OnClick(self.PhoneBtn, function() 
+    LuaTool.OnClick(self.PhoneBtn, function() 
         --多话费
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>多话费");
     end)
 
-    Tool.OnClick(self.TurretBtn, function() 
+    LuaTool.OnClick(self.TurretBtn, function() 
         --炮解锁
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>炮解锁");
     end)
 
-    Tool.OnClick(self.TorpedoBtn, function() 
+    LuaTool.OnClick(self.TorpedoBtn, function() 
         --鱼雷列表
+        LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>>>鱼雷列表");
     end)
 end
 
 
+--# gamePlayerInfo #type GamePlayerInfo
+function m:show(gamePlayerInfo)
+    self:setLeftMenuBtn(1);
+end
 
-return UIHUDMenu
+function m:hide()
+    
+end
+
+
+return m

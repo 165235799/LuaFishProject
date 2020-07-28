@@ -7,6 +7,8 @@ using UnityEditor;
 using BindType = ToLuaMenu.BindType;
 using System.Reflection;
 using UnityEngine.UI;
+using SWS;
+using UnityEngine.Events;
 
 public static class CustomSettings
 {
@@ -94,36 +96,46 @@ public static class CustomSettings
 #endif
       
         _GT(typeof(Behaviour)),
-        _GT(typeof(MonoBehaviour)),        
+        _GT(typeof(MonoBehaviour)),
         _GT(typeof(GameObject)),
         _GT(typeof(TrackedReference)),
         _GT(typeof(Application)),
         _GT(typeof(Physics)),
         _GT(typeof(Collider)),
-        _GT(typeof(Time)),        
+        _GT(typeof(Time)),
         _GT(typeof(Texture)),
         _GT(typeof(Texture2D)),
-        _GT(typeof(Shader)),        
+        _GT(typeof(Shader)),
         _GT(typeof(Renderer)),
         _GT(typeof(WWW)),
-        _GT(typeof(Screen)),        
+        _GT(typeof(Screen)),
         _GT(typeof(CameraClearFlags)),
-        _GT(typeof(AudioClip)),        
+        _GT(typeof(AudioClip)),
         _GT(typeof(AssetBundle)),
         _GT(typeof(ParticleSystem)),
-        _GT(typeof(AsyncOperation)).SetBaseType(typeof(System.Object)),        
+        _GT(typeof(AsyncOperation)).SetBaseType(typeof(System.Object)),
         _GT(typeof(LightType)),
         _GT(typeof(SleepTimeout)),
         
+        /////////////////////////////////////////////////////////////////////////////////
         //GK Add
         //System Class
         _GT(typeof(CanvasGroup)),
         _GT(typeof(Text)),
         _GT(typeof(Button)),
-
+        _GT(typeof(Ray)),
+        _GT(typeof(RaycastHit)),
+        _GT(typeof(UnityEvent)),
+        
         //My Class
-        _GT(typeof(Tool)),
+        _GT(typeof(LuaTool)),
         _GT(typeof(ResourceLoad)),
+
+        //3rd Plugin
+        _GT(typeof(PathManager)),
+        _GT(typeof(DG.Tweening.AxisConstraint)),
+        _GT(typeof(splineMove)),
+        /////////////////////////////////////////////////////////////////////////////////
 
 #if UNITY_5_3_OR_NEWER && !UNITY_5_6_OR_NEWER
         _GT(typeof(UnityEngine.Experimental.Director.DirectorPlayer)),

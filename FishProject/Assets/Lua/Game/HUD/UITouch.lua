@@ -1,40 +1,33 @@
 LuaBase = require("LuaBase")
 Class =  require("Class")
 
-local UITouch = Class.New(LuaBase);
+local m = Class.New(LuaBase);
 
-function UITouch:ctor()
+function m:ctor()
     self.touchBtn = nil
 end
 
-function UITouch:init()
+function m:init()
     self.touchBtn = self.transform:Find("touchBtn");
 
-    Tool.AddListener(self.touchBtn, function() 
-        self:OnClick();
-    end, 
-    function() 
-        self:OnClickDownEvent();
-    end, 
-    function() 
-        self:OnClickUpEvent();
-    end)
+    LuaTool.AddListener(self.touchBtn,
+        function() self:OnClick();          end, 
+        function() self:OnClickDownEvent(); end,
+        function() self:OnClickUpEvent();   end
+    )
 end
 
-
-function UITouch:OnClick()
-    ResourceLoad.LoadAsset("Assets/Prefab/Game/HUD/Common/Bullet.prefab", self.transform, function(instanceObj)
-    
-    end);
+function m:OnClick()
+    --LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>OnClickEvent" .. tostring(UnityEngine.Input.mousePosition));
+    EvnetManager:EmitEvent(GameEventHandle.ClickTouchFire, UnityEngine.Input.mousePosition);
 end
 
-function UITouch:OnClickDownEvent()
-    Tool.DebugLog(2, ">>>>>>>>>>>>>>>>>>>>OnClickDownEvent");
+function m:OnClickDownEvent()
+    --LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>OnClickDownEvent");
 end
 
-function UITouch:OnClickUpEvent()
-    Tool.DebugLog(2, ">>>>>>>>>>>>>>>>>>>>OnClickUpEvent");
+function m:OnClickUpEvent()
+    --LuaTool.DebugLog(LogType.Warning, ">>>>>>>>>>>>>>>>>>>>OnClickUpEvent");
 end
 
-
-return UITouch;
+return m;

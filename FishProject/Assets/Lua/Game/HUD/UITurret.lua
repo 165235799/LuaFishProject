@@ -1,46 +1,106 @@
-LuaBase = require("LuaBase")
-Class =  require("Class")
-TurretCell =  require("Game/HUD/TurretCell")
-GamePlayerData =  require("Data/LuaInstance/GamePlayerData")
+local LuaBase = require("LuaBase")
+local Class =  require("Class")
+local TurretCell =  require("Game/HUD/TurretCell")
 
-local UITurret = Class.New(LuaBase);
+local m = Class.New(LuaBase);
 
-function UITurret:ctor()
+function m:ctor()
     self.seatTransList = {}
     self.turretCellList = {}
-    self.turretCellPrefab = nil;
 end
 
-function UITurret:init()
-    self.turretCellPrefab = self.transform:Find("TurretCell");
+function m:init()
+   self:registeredListener()
+    self:initSeatTrans();
+end
 
-    local noteName = "Seat_";
-    for i = 0, 4, 1 do
-        local trans = self.transform:Find(string.format("%s%d", noteName, i));
+function m:registeredListener()
+    EvnetManager:AddListener(GameEventHandle.PlayerInMatch, function(gamePlayerInfo) 
+        self:playerIn(gamePlayerInfo);
+    end);
+
+    EvnetManager:AddListener(GameEventHandle.ClickTouchFire, function(clickScreenPos) 
+         self:oneselfFireBullet(clickScreenPos);
+     end);
+end
+
+function m:removeListener()
+    
+end
+
+---初始化位置节点
+function m:initSeatTrans()
+    for i = 0, Constanct.MAX_TURRET_COUNT, 1 do
+        local trans = self.transform:Find(string.format("Seat_%d", i));
         self.seatTransList[i] = trans;
-    end
-
-    local gamePlayerInfo = Class.New(GamePlayerData);
-    gamePlayerInfo:Init(1, 1,0);
-    self:playerIn(gamePlayerInfo);
-   
+    end 
 end
 
-function UITurret:playerIn(gamePlayerInfo)
-    if(self.turretCellList[gamePlayerInfo.SeatId] ~= nil) then
-        self.turretCellList[gamePlayerInfo.SeatId]:Show(gamePlayerInfo);
+--玩家开火
+function m:oneselfFireBullet(clickScreenPos)
+    for i, turret in pairs(self.turretCellList) do
+        if(turret.GamePlayerData ~= nil and turret.GamePlayerData.isOneSelf) then
+            turret:FireBullet(clickScreenPos, function(bulletInfo) 
+                EvnetManager:EmitEvent(GameEventHandle.PlayerFireBullet, bulletInfo);
+            end);
+        end
+    end
+end
+
+--其他玩家开火
+function m:otherFireBullet()
+end
+
+-------------------------------------------------------------------------------------------
+--玩家进入渔场消息
+--gamePlayerInfo #GamePlayerInfo
+function m:playerIn(gamePlayerInfo)
+    if(self.turretCellList[gamePlayerInfo.uiSeatId] ~= nil) then
+        self:UpdateTurretInfo(gamePlayerInfo);
     else
-        Tool.InstanceObj(self.turretCellPrefab.gameObject, self.seatTransList[gamePlayerInfo.UISeatId], function(obj) 
-            local cellClass = Class.New(TurretCell);
-            cellClass:Awake(obj);
-            cellClass:Show(gamePlayerInfo);
-            self.turretCellList[gamePlayerInfo.SeatId] = cellClass;
-        end)
+        self:AddNewTurretInfo(gamePlayerInfo);
     end
 end
 
-function UITurret:playerOut()
+--玩家退出渔场
+function m:playerOut()
+    if(self.turretCellList[gamePlayerInfo.uiSeatId] ~= nil) then
+        self:RemoveTurretInfo(gamePlayerInfo);
+    end
 end
 
+-------------------------------------------------------------------------------------------
+--添加炮台信息
+--gamePlayerInfo #GamePlayerInfo
+function m:AddNewTurretInfo(gamePlayerInfo)
+    local trans = self.seatTransList[gamePlayerInfo.uiSeatId];
+    if(trans == nil) then
+        LuaTool.DebugLog(LogType.Error, ">>>>>>Not Find Seat Not  = " .. tostring(gamePlayerInfo.uiSeatId));
+    end
 
-return UITurret;
+    ResourceLoad.LoadAsset(View[UIType.TurretCell].PrefabStr, trans, function(instanceObj)
+        local cellClass = Class.New(TurretCell);
+        instanceObj.transform.localPosition = Vector3.New(0.0, 0.0, 0.0);
+        cellClass:Awake(instanceObj);
+        cellClass:Show(gamePlayerInfo);
+        self.turretCellList[gamePlayerInfo.uiSeatId] = cellClass;
+    end);
+end
+
+--更新炮台信息
+--gamePlayerInfo #GamePlayerInfo
+function m:UpdateTurretInfo(gamePlayerInfo) 
+    if(self.turretCellList[gamePlayerInfo.uiSeatId] ~= nil) then
+        self.turretCellList[gamePlayerInfo.uiSeatId]:updateTurret(gamePlayerInfo)
+    end
+end
+
+--删除炮台
+--gamePlayerInfo #GamePlayerInfo
+function m:RemoveTurretInfo(gamePlayerInfo)
+    if(self.turretCellList[gamePlayerInfo.uiSeatId] ~= nil) then
+        self.turretCellList[gamePlayerInfo.uiSeatId]:clearTurret()
+    end
+end
+
+return m;

@@ -9,5 +9,4 @@ function Class.New(base)
     return o;
 end
 
-
 return Class; 

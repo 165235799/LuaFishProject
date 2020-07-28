@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: eef89d54784f549438f8313d915ee102
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone001
+    100002: Bone002
+    100004: Bone003
+    100006: Bone004
+    100008: Bone005
+    100010: Bone006
+    100012: Bone007
+    100014: Bone008
+    100016: Bone009
+    100018: Bone010
+    100020: Bone010(mirrored)
+    100022: Bone011
+    100024: Bone011(mirrored)
+    100026: Bone012
+    100028: Bone012(mirrored)
+    100030: Bone013
+    100032: Bone013(mirrored)
+    100034: Bone014
+    100036: Bone014(mirrored)
+    100038: Bone015
+    100040: Bone015(mirrored)
+    100042: Bone016
+    100044: Bone016(mirrored)
+    100046: Bone017
+    100048: Bone017(mirrored)
+    100050: Bone018
+    100052: Bone018(mirrored)
+    100054: Bone019
+    100056: Bone020
+    100058: Bone021
+    100060: Bone022
+    100062: Bone022(mirrored)
+    100064: Bone023
+    100066: Bone023(mirrored)
+    100068: Bone024
+    100070: Bone024(mirrored)
+    100072: Bone025
+    100074: Bone025(mirrored)
+    100076: Bone026
+    100078: Bone026(mirrored)
+    100080: Bone027
+    100082: Bone027(mirrored)
+    100084: Bone028
+    100086: Bone029
+    100088: Bone030
+    100090: Bone030(mirrored)
+    100092: Bone031
+    100094: Bone032
+    100096: Bone033
+    100098: Bone034
+    100100: Bone035
+    100102: Bone036
+    100104: Dummy001
+    100106: Dummy002
+    100108: Dummy003
+    100110: //RootNode
+    100112: Bone009(mirrored)
+    100114: Bone019(mirrored)
+    100116: Bone020(mirrored)
+    100118: Dummy004
+    100120: Dummy005
+    400000: Bone001
+    400002: Bone002
+    400004: Bone003
+    400006: Bone004
+    400008: Bone005
+    400010: Bone006
+    400012: Bone007
+    400014: Bone008
+    400016: Bone009
+    400018: Bone010
+    400020: Bone010(mirrored)
+    400022: Bone011
+    400024: Bone011(mirrored)
+    400026: Bone012
+    400028: Bone012(mirrored)
+    400030: Bone013
+    400032: Bone013(mirrored)
+    400034: Bone014
+    400036: Bone014(mirrored)
+    400038: Bone015
+    400040: Bone015(mirrored)
+    400042: Bone016
+    400044: Bone016(mirrored)
+    400046: Bone017
+    400048: Bone017(mirrored)
+    400050: Bone018
+    400052: Bone018(mirrored)
+    400054: Bone019
+    400056: Bone020
+    400058: Bone021
+    400060: Bone022
+    400062: Bone022(mirrored)
+    400064: Bone023
+    400066: Bone023(mirrored)
+    400068: Bone024
+    400070: Bone024(mirrored)
+    400072: Bone025
+    400074: Bone025(mirrored)
+    400076: Bone026
+    400078: Bone026(mirrored)
+    400080: Bone027
+    400082: Bone027(mirrored)
+    400084: Bone028
+    400086: Bone029
+    400088: Bone030
+    400090: Bone030(mirrored)
+    400092: Bone031
+    400094: Bone032
+    400096: Bone033
+    400098: Bone034
+    400100: Bone035
+    400102: Bone036
+    400104: Dummy001
+    400106: Dummy002
+    400108: Dummy003
+    400110: //RootNode
+    400112: Bone009(mirrored)
+    400114: Bone019(mirrored)
+    400116: Bone020(mirrored)
+    400118: Dummy004
+    400120: Dummy005
+    7400000: fengweiyu_death
+    7400002: death
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

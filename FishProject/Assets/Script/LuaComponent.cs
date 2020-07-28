@@ -1,6 +1,4 @@
 ﻿using LuaInterface;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LuaComponent : MonoBehaviour
@@ -13,58 +11,97 @@ public class LuaComponent : MonoBehaviour
     public readonly string OnDisableFuncName = "OnDisable";
     public readonly string OnDestroyFuncName = "OnDestroy";
    
+    private LuaTable mLuaTable = null;
 
-    LuaTable mLuaTable = null;
+    public LuaTable Lua { get { return mLuaTable; } }
 
-    private void Awake()
+    public void Initialize(string luaStr)
     {
-        string pathStr = "Game/HUD/UITouch.lua";
-        mLuaTable = GlobalComponent.Instance.Lua.DoFile<LuaTable>(pathStr);
+        mLuaTable = GlobalComponent.Instance.Lua.DoFile<LuaTable>(luaStr);
+
         if (mLuaTable == null)
-            Debug.LogError(">>>>not find lua path:" + pathStr);
-
-        LuaFunction cFunc = mLuaTable.GetLuaFunction(CtorFuncName);
-        if (cFunc != null)
         {
-            cFunc.BeginPCall();
-            cFunc.Push(mLuaTable);
-            cFunc.PCall();
-            cFunc.EndPCall();
+            Debug.LogError(">>>>not find lua path:" + luaStr);
+            return;
         }
-
-        LuaFunction func = mLuaTable.GetLuaFunction(AwakeFuncName);
-        if(func != null)
+        else
         {
-            func.BeginPCall();
-            func.Push(mLuaTable);
-            func.Push(this.gameObject);
-            func.PCall();
-            func.EndPCall();
+            LuaFunction cFunc = mLuaTable.GetLuaFunction(CtorFuncName);
+            CallLuaFunction(cFunc, mLuaTable);
+
+            LuaFunction func = mLuaTable.GetLuaFunction(AwakeFuncName);
+            CallLuaFunction(func, mLuaTable, this.gameObject);
         }
     }
 
     private void OnEnable()
     {
-        mLuaTable.Call(OnEnableFuncName);
+        CallFunctionToName(OnEnableFuncName);
     }
 
     private void Start()
     {
-        mLuaTable.Call(StartFuncName);
+        CallLuaFunctionForName(StartFuncName, mLuaTable);
     }
 
     private void Update()
     {
-        mLuaTable.Call(UpdateFuncName);
+        if (mLuaTable != null)
+        {
+            LuaFunction cFunc = mLuaTable.GetLuaFunction(UpdateFuncName);
+            if (cFunc != null)
+            {
+                cFunc.BeginPCall();
+                cFunc.Push(mLuaTable);
+                cFunc.Push(Time.deltaTime);
+                cFunc.PCall();
+                cFunc.EndPCall();
+            }
+        }
+        //CallLuaFunctionForName(UpdateFuncName, mLuaTable);
     }
 
     private void OnDisable()
     {
-        mLuaTable.Call(OnDisableFuncName);
+        CallLuaFunctionForName(OnDisableFuncName, mLuaTable);
     }
 
     private void OnDestroy()
     {
-        mLuaTable.Call(OnDestroyFuncName);
+        Debug.LogWarning(">>>>>>Lua Component Destroy");
+        CallLuaFunctionForName(OnDestroyFuncName, mLuaTable);
+    }
+
+    private void CallFunctionToName(string name)
+    {
+        if(mLuaTable != null)
+        {
+            mLuaTable.Call(name);
+        }
+    }
+
+    private void CallLuaFunctionForName(string funcName, LuaTable luaTable, GameObject obj = null)
+    {
+        if (luaTable != null)
+        {
+            LuaFunction cFunc = luaTable.GetLuaFunction(funcName);
+            if (cFunc != null)
+            {
+                CallLuaFunction(cFunc, luaTable, obj);
+            }
+        }
+    }
+
+    private void CallLuaFunction(LuaFunction func, LuaTable luaTable, GameObject obj = null)
+    {
+        if (func != null)
+        {
+            func.BeginPCall();
+            func.Push(luaTable);
+            if(obj != null)
+                func.Push(obj);
+            func.PCall();
+            func.EndPCall();
+        }
     }
 }

@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 76457aa3c1727d242bebf15aa5cd407e
+timeCreated: 1562738434
+licenseType: Free
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Ice_Texture: {fileID: 2800000, guid: 16a54a7d84c94ee4db0851a2e7e9a0c5, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -468,7 +468,7 @@ public class UnityEngine_UI_SelectableWrap
 			o = ToLua.ToObject(L, 1);
 			UnityEngine.UI.Selectable obj = (UnityEngine.UI.Selectable)o;
 			UnityEngine.Animator ret = obj.animator;
-			ToLua.PushSealed(L, ret);
+			ToLua.Push(L, ret);
 			return 1;
 		}
 		catch(Exception e)

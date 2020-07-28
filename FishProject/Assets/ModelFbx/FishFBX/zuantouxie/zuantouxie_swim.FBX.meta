@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: f1483b3f5a536c248861b354c430dcf2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bone001(mirrored)
+    100002: Bone001(mirrored)(mirrored)
+    100004: Bone002(mirrored)
+    100006: Bone002(mirrored)(mirrored)
+    100008: Bone003(mirrored)
+    100010: Bone003(mirrored)(mirrored)
+    100012: Bone017(mirrored)
+    100014: Bone017(mirrored)(mirrored)
+    100016: Bone018(mirrored)
+    100018: Bone018(mirrored)(mirrored)
+    100020: Bone019(mirrored)
+    100022: Bone019(mirrored)(mirrored)
+    100024: Bone021(mirrored)
+    100026: Bone021(mirrored)(mirrored)
+    100028: Bone022(mirrored)
+    100030: Bone022(mirrored)(mirrored)
+    100032: Bone023(mirrored)
+    100034: Bone023(mirrored)(mirrored)
+    100036: Bone025
+    100038: Bone025(mirrored)
+    100040: Bone026
+    100042: Bone026(mirrored)
+    100044: Bone027
+    100046: Bone027(mirrored)
+    100048: Bone029
+    100050: Bone031
+    100052: Bone032
+    100054: Bone032(mirrored)
+    100056: Bone033
+    100058: Bone033(mirrored)
+    100060: Bone034
+    100062: Bone034(mirrored)
+    100064: Bone036
+    100066: Bone037
+    100068: Bone038
+    100070: Bone040
+    100072: Bone042
+    100074: Bone042(mirrored)
+    100076: Bone044
+    100078: Bone044(mirrored)
+    100080: Dummy001
+    100082: Dummy002
+    100084: IK Chain006
+    100086: IK Chain007
+    100088: IK Chain008
+    100090: IK Chain009
+    100092: IK Chain010
+    100094: IK Chain011
+    100096: Point001
+    100098: //RootNode
+    100100: Dummy003
+    100102: IK Chain012
+    100104: IK Chain013
+    100106: IK Chain014
+    100108: IK Chain015
+    400000: Bone001(mirrored)
+    400002: Bone001(mirrored)(mirrored)
+    400004: Bone002(mirrored)
+    400006: Bone002(mirrored)(mirrored)
+    400008: Bone003(mirrored)
+    400010: Bone003(mirrored)(mirrored)
+    400012: Bone017(mirrored)
+    400014: Bone017(mirrored)(mirrored)
+    400016: Bone018(mirrored)
+    400018: Bone018(mirrored)(mirrored)
+    400020: Bone019(mirrored)
+    400022: Bone019(mirrored)(mirrored)
+    400024: Bone021(mirrored)
+    400026: Bone021(mirrored)(mirrored)
+    400028: Bone022(mirrored)
+    400030: Bone022(mirrored)(mirrored)
+    400032: Bone023(mirrored)
+    400034: Bone023(mirrored)(mirrored)
+    400036: Bone025
+    400038: Bone025(mirrored)
+    400040: Bone026
+    400042: Bone026(mirrored)
+    400044: Bone027
+    400046: Bone027(mirrored)
+    400048: Bone029
+    400050: Bone031
+    400052: Bone032
+    400054: Bone032(mirrored)
+    400056: Bone033
+    400058: Bone033(mirrored)
+    400060: Bone034
+    400062: Bone034(mirrored)
+    400064: Bone036
+    400066: Bone037
+    400068: Bone038
+    400070: Bone040
+    400072: Bone042
+    400074: Bone042(mirrored)
+    400076: Bone044
+    400078: Bone044(mirrored)
+    400080: Dummy001
+    400082: Dummy002
+    400084: IK Chain006
+    400086: IK Chain007
+    400088: IK Chain008
+    400090: IK Chain009
+    400092: IK Chain010
+    400094: IK Chain011
+    400096: Point001
+    400098: //RootNode
+    400100: Dummy003
+    400102: IK Chain012
+    400104: IK Chain013
+    400106: IK Chain014
+    400108: IK Chain015
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

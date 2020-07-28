@@ -6,7 +6,7 @@ public class UnityEngine_CanvasGroupWrap
 {
 	public static void Register(LuaState L)
 	{
-		L.BeginClass(typeof(UnityEngine.CanvasGroup), typeof(UnityEngine.Component));
+		L.BeginClass(typeof(UnityEngine.CanvasGroup), typeof(UnityEngine.Behaviour));
 		L.RegFunction("IsRaycastLocationValid", IsRaycastLocationValid);
 		L.RegFunction("New", _CreateUnityEngine_CanvasGroup);
 		L.RegFunction("__eq", op_Equality);

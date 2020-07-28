@@ -1,11 +1,11 @@
-local LuaBase = {}
+local m = {}
 
-function LuaBase:ctor()
-    self.gameObject = null;
-    self.transform = null;
+function m:ctor()
+    self.gameObject = nil;
+    self.transform = nil;
 end
 
-function LuaBase:Awake(obj)
+function m:Awake(obj)
     if(obj == nil) then
         print("obj is nil");
         return 
@@ -16,22 +16,22 @@ function LuaBase:Awake(obj)
     self:init()
 end
 
-function LuaBase:OnEnable()
+function m:init()
 end
 
-function LuaBase:Start()
+function m:OnEnable()
 end
 
-function LuaBase:Update()
+function m:Start()
 end
 
-function LuaBase:OnDisable()
+function m:Update(deltaTime)
 end
 
-function LuaBase:OnDestroy()
+function m:OnDisable()
 end
 
-function LuaBase:init()
+function m:OnDestroy()
 end
 
-return LuaBase;
+return m;

@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 690b725b1100b584ea3c0bb1fba573c4
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bone001
+    100002: Bone002
+    100004: Bone003
+    100006: Bone004
+    100008: Bone004(mirrored)
+    100010: Bone005
+    100012: Bone005(mirrored)
+    100014: Bone006
+    100016: Bone006(mirrored)
+    100018: Bone007
+    100020: Bone007(mirrored)
+    100022: Bone008
+    100024: Bone009
+    100026: Bone015
+    100028: Bone015(mirrored)
+    100030: Bone016
+    100032: Bone016(mirrored)
+    100034: Bone10000
+    100036: Bone10001
+    100038: Bone10002
+    100040: Bone10003
+    100042: Bone10004
+    100044: Bone10005
+    100046: Bone10006
+    100048: Bone10007
+    100050: Bone10008
+    100052: Bone10009
+    100054: Bone10010
+    100056: Bone10011
+    100058: Bone10012
+    100060: Bone10013
+    100062: Bone10014
+    100064: Bone10015
+    100066: Bone10016
+    100068: Bone10017
+    100070: Bone10018
+    100072: Bone10019
+    100074: Bone10020
+    100076: Bone10021
+    100078: Bone10022
+    100080: Bone10023
+    100082: Bone10024
+    100084: Bone10025
+    100086: Bone10026
+    100088: Bone10027
+    100090: Bone10028
+    100092: Bone10029
+    100094: Dummy001
+    100096: wuzei
+    100098: //RootNode
+    400000: Bone001
+    400002: Bone002
+    400004: Bone003
+    400006: Bone004
+    400008: Bone004(mirrored)
+    400010: Bone005
+    400012: Bone005(mirrored)
+    400014: Bone006
+    400016: Bone006(mirrored)
+    400018: Bone007
+    400020: Bone007(mirrored)
+    400022: Bone008
+    400024: Bone009
+    400026: Bone015
+    400028: Bone015(mirrored)
+    400030: Bone016
+    400032: Bone016(mirrored)
+    400034: Bone10000
+    400036: Bone10001
+    400038: Bone10002
+    400040: Bone10003
+    400042: Bone10004
+    400044: Bone10005
+    400046: Bone10006
+    400048: Bone10007
+    400050: Bone10008
+    400052: Bone10009
+    400054: Bone10010
+    400056: Bone10011
+    400058: Bone10012
+    400060: Bone10013
+    400062: Bone10014
+    400064: Bone10015
+    400066: Bone10016
+    400068: Bone10017
+    400070: Bone10018
+    400072: Bone10019
+    400074: Bone10020
+    400076: Bone10021
+    400078: Bone10022
+    400080: Bone10023
+    400082: Bone10024
+    400084: Bone10025
+    400086: Bone10026
+    400088: Bone10027
+    400090: Bone10028
+    400092: Bone10029
+    400094: Dummy001
+    400096: wuzei
+    400098: //RootNode
+    2100000: wuzei_m
+    4300000: wuzei
+    9500000: //RootNode
+    13700000: wuzei
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wuzei_m
+    second: {fileID: 2100000, guid: c51cfe7e52b168144a387b2b1a0490dd, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
