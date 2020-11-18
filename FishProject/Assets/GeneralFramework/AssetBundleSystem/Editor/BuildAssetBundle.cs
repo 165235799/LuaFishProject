@@ -40,37 +40,37 @@ public class PackageInfo : ScriptableObject
 
 #region 常量
 
-public class BuildConstant
-{
-    public const int WINDOW_WIDTH = 800;
-    public const int WINDOW_HEIGHT = 800;
+//public class BuildConstant
+//{
+//    public const int WINDOW_WIDTH = 800;
+//    public const int WINDOW_HEIGHT = 800;
 
-    public const int PACK_AREAN_WIDTH = 780;
-    public const int PACK_AREAN_HEIGHT = 650;
+//    public const int PACK_AREAN_WIDTH = 780;
+//    public const int PACK_AREAN_HEIGHT = 650;
 
-    public const string ASSET_BUNDLE_VARIANT = "unity3d";
+//    public const string ASSET_BUNDLE_VARIANT = "unity3d";
 
-    public enum PlatformType
-    {
-        IOS = 0,
-        Android,
-    }
+//    public enum PlatformType
+//    {
+//        IOS = 0,
+//        Android,
+//    }
 
-    public static string GetLuaTempPath()
-    {
-        return Application.dataPath + "/LuaTemp/";
-    }
+//    public static string GetLuaTempPath()
+//    {
+//        return Application.dataPath + "/LuaTemp/";
+//    }
 
-    public static string GetLuaPath()
-    {
-        return Application.dataPath + "/Lua/";
-    }
+//    public static string GetLuaPath()
+//    {
+//        return Application.dataPath + "/Lua/";
+//    }
 
-    public static string GetSavePathPath()
-    {
-        return "Assets/GeneralFramework/AssetBundleSystem/SavePackPath.asset";
-    }
-}
+//    public static string GetSavePathPath()
+//    {
+//        return "Assets/GeneralFramework/AssetBundleSystem/SavePackPath.asset";
+//    }
+//}
 
 #endregion
 
@@ -83,7 +83,7 @@ public class BuildWindow : EditorWindow
     private int mPlatformIndex = 0;
     private string mOutPath = string.Empty;
 
-    [MenuItem("AssetBudle/Build")]
+    [MenuItem("AssetBundleTools/BuildResource")]
     public static void ShowWindow()
     {
         EditorWindow.GetWindow(typeof(BuildWindow));
@@ -494,7 +494,7 @@ public class BuildWindow : EditorWindow
         for (int i = 0; i < files.Length; i++)
         {
             if (!files[i].FullName.Contains(".meta"))
-                File.Copy(files[i].FullName, Path.Combine(target.FullName, string.Format(files[i].Name + ".byte")), true);
+                File.Copy(files[i].FullName, Path.Combine(target.FullName, string.Format(files[i].Name + ".bytes")), true);
         }
     }
 

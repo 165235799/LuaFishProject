@@ -1,0 +1,52 @@
+{"frames": {
+
+"btn-lvse.png":
+{
+	"frame": {"x":2,"y":2,"w":402,"h":142},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":402,"h":142},
+	"sourceSize": {"w":402,"h":142}
+},
+"btn-zise.png":
+{
+	"frame": {"x":2,"y":146,"w":402,"h":140},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":1,"w":402,"h":140},
+	"sourceSize": {"w":402,"h":142}
+},
+"font-denglu.png":
+{
+	"frame": {"x":2,"y":288,"w":119,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":54},
+	"sourceSize": {"w":119,"h":54}
+},
+"font-zhdl.png":
+{
+	"frame": {"x":2,"y":344,"w":396,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":396,"h":120},
+	"sourceSize": {"w":396,"h":120}
+},
+"img-fangkuai.png":
+{
+	"frame": {"x":400,"y":344,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":50},
+	"sourceSize": {"w":50,"h":50}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "Atlas_Login.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:a278deca42f95e31e38db3c3ddf86cfa$"
+}
+}

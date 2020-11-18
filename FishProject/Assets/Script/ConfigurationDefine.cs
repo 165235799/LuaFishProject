@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ConfigurationDefine
 {
-    public const bool IsEditor = true;
-
-    public const bool IsAssetBundle = false;
+    //是否开启本地热更模式
+    public const bool OpenAssetBundle = false;
 }

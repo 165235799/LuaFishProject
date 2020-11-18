@@ -129,6 +129,7 @@ public static class CustomSettings
         
         //My Class
         _GT(typeof(LuaTool)),
+        _GT(typeof(LuaSceneTool)),
         _GT(typeof(ResourceLoad)),
 
         //3rd Plugin

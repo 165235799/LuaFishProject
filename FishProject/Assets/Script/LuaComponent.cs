@@ -68,7 +68,6 @@ public class LuaComponent : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.LogWarning(">>>>>>Lua Component Destroy");
         CallLuaFunctionForName(OnDestroyFuncName, mLuaTable);
     }
 

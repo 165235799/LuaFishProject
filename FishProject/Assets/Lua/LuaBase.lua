@@ -32,6 +32,8 @@ function m:OnDisable()
 end
 
 function m:OnDestroy()
+    self.gameObject = nil;
+    self.transform = nil;
 end
 
 return m;

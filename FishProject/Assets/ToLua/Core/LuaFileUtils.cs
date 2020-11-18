@@ -169,6 +169,13 @@ namespace LuaInterface
 #endif
                 }
 
+                if(str == null)
+                {
+#if UNITY_EDITOR
+                    if (ConfigurationDefine.OpenAssetBundle)
+                        return ReadZipFile(fileName);
+#endif
+                }
                 return str;
             }
             else
@@ -226,27 +233,35 @@ namespace LuaInterface
             AssetBundle zipFile = null;
             byte[] buffer = null;
             string zipName = null;
-
+            string newFileName = null;
             using (CString.Block())
             {
                 CString sb = CString.Alloc(256);
-                sb.Append("lua");
-                int pos = fileName.LastIndexOf('/');
+                sb.Append("lua.unity3d");
 
-                if (pos > 0)
+                newFileName = string.Format("assets/luatemp/{0}", fileName.ToLower());
+                //int pos = fileName.LastIndexOf('/');
+
+                //if (pos > 0)
+                //{
+                //    sb.Append("_");
+                //    sb.Append(fileName, 0, pos).ToLower().Replace('/', '_');
+                //    fileName = fileName.Substring(pos + 1);
+                //}
+
+                //if (!fileName.EndsWith(".lua"))
+                //{
+                //    fileName += ".lua";
+                //}
+
+
+                if (!newFileName.EndsWith(".lua"))
                 {
-                    sb.Append("_");
-                    sb.Append(fileName, 0, pos).ToLower().Replace('/', '_');
-                    fileName = fileName.Substring(pos + 1);
+                    newFileName += ".lua";
                 }
-
-                if (!fileName.EndsWith(".lua"))
-                {
-                    fileName += ".lua";
-                }
-
 #if UNITY_5 || UNITY_5_3_OR_NEWER
-                fileName += ".bytes";
+               // fileName += ".bytes";
+               newFileName += ".bytes";
 #endif
                 zipName = sb.ToString();
                 zipMap.TryGetValue(zipName, out zipFile);
@@ -257,7 +272,8 @@ namespace LuaInterface
 #if UNITY_4_6 || UNITY_4_7
                 TextAsset luaCode = zipFile.Load(fileName, typeof(TextAsset)) as TextAsset;
 #else
-                TextAsset luaCode = zipFile.LoadAsset<TextAsset>(fileName);
+                //TextAsset luaCode = zipFile.LoadAsset<TextAsset>(fileName);
+                TextAsset luaCode = zipFile.LoadAsset<TextAsset>(newFileName);
 #endif
                 if (luaCode != null)
                 {

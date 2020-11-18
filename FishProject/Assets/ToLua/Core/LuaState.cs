@@ -196,7 +196,8 @@ namespace LuaInterface
                 }
 
                 AddSearchPath(LuaConst.toluaDir);
-                AddSearchPath(LuaConst.luaDir);
+                if (!ConfigurationDefine.OpenAssetBundle)
+                    AddSearchPath(LuaConst.luaDir);
 #endif
                 if (LuaFileUtils.Instance.GetType() == typeof(LuaFileUtils))
                 {
