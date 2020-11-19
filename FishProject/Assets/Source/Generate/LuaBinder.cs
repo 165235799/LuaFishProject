@@ -11,6 +11,7 @@ public static class LuaBinder
 		L.BeginModule(null);
 		LuaInterface_DebuggerWrap.Register(L);
 		LuaToolWrap.Register(L);
+		LuaSceneToolWrap.Register(L);
 		ResourceLoadWrap.Register(L);
 		LuaProfilerWrap.Register(L);
 		L.BeginModule("LuaInterface");

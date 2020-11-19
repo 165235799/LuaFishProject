@@ -7,6 +7,9 @@ public class LuaToolWrap
 	public static void Register(LuaState L)
 	{
 		L.BeginClass(typeof(LuaTool), typeof(System.Object));
+		L.RegFunction("GetGameObject", GetGameObject);
+		L.RegFunction("GetTransform", GetTransform);
+		L.RegFunction("GetComponent", GetComponent);
 		L.RegFunction("InstanceObj", InstanceObj);
 		L.RegFunction("DebugLog", DebugLog);
 		L.RegFunction("DebugDrawLine", DebugDrawLine);
@@ -39,6 +42,110 @@ public class LuaToolWrap
 			else
 			{
 				return LuaDLL.luaL_throw(L, "invalid arguments to ctor method: LuaTool.New");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GetGameObject(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 2 && TypeChecker.CheckTypes<UnityEngine.Transform, string>(L, 1))
+			{
+				UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.ToObject(L, 1);
+				string arg1 = ToLua.ToString(L, 2);
+				UnityEngine.GameObject o = LuaTool.GetGameObject(arg0, arg1);
+				ToLua.PushSealed(L, o);
+				return 1;
+			}
+			else if (count == 2 && TypeChecker.CheckTypes<UnityEngine.GameObject, string>(L, 1))
+			{
+				UnityEngine.GameObject arg0 = (UnityEngine.GameObject)ToLua.ToObject(L, 1);
+				string arg1 = ToLua.ToString(L, 2);
+				UnityEngine.GameObject o = LuaTool.GetGameObject(arg0, arg1);
+				ToLua.PushSealed(L, o);
+				return 1;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: LuaTool.GetGameObject");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GetTransform(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 2 && TypeChecker.CheckTypes<UnityEngine.Transform, string>(L, 1))
+			{
+				UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.ToObject(L, 1);
+				string arg1 = ToLua.ToString(L, 2);
+				UnityEngine.Transform o = LuaTool.GetTransform(arg0, arg1);
+				ToLua.Push(L, o);
+				return 1;
+			}
+			else if (count == 2 && TypeChecker.CheckTypes<UnityEngine.GameObject, string>(L, 1))
+			{
+				UnityEngine.GameObject arg0 = (UnityEngine.GameObject)ToLua.ToObject(L, 1);
+				string arg1 = ToLua.ToString(L, 2);
+				UnityEngine.Transform o = LuaTool.GetTransform(arg0, arg1);
+				ToLua.Push(L, o);
+				return 1;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: LuaTool.GetTransform");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GetComponent(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 3 && TypeChecker.CheckTypes<UnityEngine.Transform, string, string>(L, 1))
+			{
+				UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.ToObject(L, 1);
+				string arg1 = ToLua.ToString(L, 2);
+				string arg2 = ToLua.ToString(L, 3);
+				UnityEngine.Component o = LuaTool.GetComponent(arg0, arg1, arg2);
+				ToLua.Push(L, o);
+				return 1;
+			}
+			else if (count == 3 && TypeChecker.CheckTypes<UnityEngine.GameObject, string, string>(L, 1))
+			{
+				UnityEngine.GameObject arg0 = (UnityEngine.GameObject)ToLua.ToObject(L, 1);
+				string arg1 = ToLua.ToString(L, 2);
+				string arg2 = ToLua.ToString(L, 3);
+				UnityEngine.Component o = LuaTool.GetComponent(arg0, arg1, arg2);
+				ToLua.Push(L, o);
+				return 1;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: LuaTool.GetComponent");
 			}
 		}
 		catch (Exception e)

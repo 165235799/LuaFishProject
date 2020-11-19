@@ -71,6 +71,7 @@ public class LoadingScene : MonoBehaviour
 
         if (mUnloadAsync.isDone)
         {
+            LuaSceneTool.UnloadSceneSuccess(mUnloadSceneIndex);
             SetLoading(1.0f);
             StartLoadScene();
         }
@@ -91,6 +92,8 @@ public class LoadingScene : MonoBehaviour
         {
             LuaSceneTool.CurrentSceneIndex = mTargetSceneIndex;
             SceneManager.UnloadSceneAsync(1);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(mTargetSceneIndex));
+            LuaSceneTool.LoadSceneSuccess(mTargetSceneIndex);
             ClearData();
         }
         yield return new WaitForEndOfFrame();

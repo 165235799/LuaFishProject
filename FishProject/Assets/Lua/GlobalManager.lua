@@ -1,6 +1,8 @@
-local Class = require("Class")
-local LuaBase = require("LuaBase")
---local GameScene = require('Scene/GameScene')
+local Class = require("Class");
+local LuaBase = require("LuaBase");
+--场景管理
+local SceneManager = require("Modules/SceneManager");
+local UIManager    = require("Modules/UIManager");
 
 -- local LocalServer = require("LocalServer/LocalServer");
 -- local PlayerInfo = require(DataInstancePath.."PlayerInfo");
@@ -17,9 +19,10 @@ function m:New(o)
 end
 
 function m:ctor()
-    -- self.playerInfo = Class.New(PlayerInfo);
-    -- self.roomInfo = Class.New(GameRoomInfo);
-    -- self.server = Class.New(LocalServer);
+    self.sceneManager = Class.New(SceneManager);
+    self.uiManager = Class.New(UIManager);
+
+    self.sceneManager:InitSceneEvent();
 end
 
 function m:Instance()
@@ -30,19 +33,51 @@ function m:Instance()
 
     return self.instance;
 end
+---------------------------------------------------------------------------------------------------
+function m:LoadScene(targetId, isunload)
+    if self.sceneManager ~= nil then
+        self.sceneManager:ChangeScene(targetId, isunload);
+    end
+end
+
+---------------------------------------------------------------------------------------------------
+--UIManager 操作
+function m:ShowUIRoot()
+    if self.uiManager ~= nil then
+        self.uiManager:ShowUIRoot();
+    end
+end
+
+function m:ShowUI(uiId)
+    if self.uiManager ~= nil then
+        self.uiManager:ShowPanel(uiId);
+    end
+end
+
+function m:HideUIForUIId(uiId)
+    if self.uiManager ~= nil then
+        self.uiManager:HidePanel(uiId);
+    end
+end
+
+function m:GetUIForUIId(uiId)
+    if self.uiManager ~= nil then
+        self.uiManager:GetPanel(uiId);
+    end
+end
+
+---------------------------------------------------------------------------------------------------
 
 
+
+
+---------------------------------------------------------------------------------------------------
 --玩家登陆成功
 -- function m:loginSuccess()
 --     self.playerInfo:init(1001);
 --     self:InitGameScene()
 -- end
----------------------------------------------------------------------------------------------------
 
-
-
-
----------------------------------------------------------------------------------------------------
 --玩家进入渔场
 -- function m:enterMatch()
 --     --测试代码

@@ -5,6 +5,7 @@ local Class =  require("Class")
 local m = Class.New(LuaBase);
 
 function m:ctor()
+    self.sceneId = SceneType.GameScene;
     self.fishGround = nil;
     self.pathManager = nil;
     self.gameHUD = nil;
@@ -15,6 +16,15 @@ function m:ctor()
     self.hudCamera = nil;
     self.modelCamera = nil;
 end
+
+function m:EnterScene()
+    print('---------------进入游戏场景');
+end
+
+function m:ExitScene()
+    print('---------------离开游戏场景');
+end
+
 
 function m:init()
     self:initGameHUD();

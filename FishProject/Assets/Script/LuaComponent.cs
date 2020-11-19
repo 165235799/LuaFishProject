@@ -68,6 +68,7 @@ public class LuaComponent : MonoBehaviour
 
     private void OnDestroy()
     {
+        Debug.LogWarning("-------------->>>>>>>>删除当前实例：" + transform.name);
         CallLuaFunctionForName(OnDestroyFuncName, mLuaTable);
     }
 

@@ -5,6 +5,48 @@ using UnityEngine.UI;
 
 public class LuaTool
 {
+    #region 中间层
+
+    public static GameObject GetGameObject(GameObject parentObj, string path)
+    {
+        return GetGameObject(parentObj.transform, path);
+    }
+
+    public static GameObject GetGameObject(Transform parentTrans, string path)
+    {
+        return parentTrans.Find(path).gameObject;
+    }
+
+    public static Transform GetTransform(GameObject parentObj, string path)
+    {
+        return GetTransform(parentObj.transform, path);
+    }
+
+    public static Transform GetTransform(Transform parentTrans, string path)
+    {
+        return parentTrans.Find(path);
+    }
+
+    public static Component GetComponent(GameObject obj, string path, string typeStr)
+    {
+        return GetComponent(obj.transform, path, typeStr);
+    }
+
+    public static Component GetComponent(Transform trans, string path, string typeStr)
+    {
+        if(path.Equals(string.Empty))
+        {
+            return trans.GetComponent(typeStr);
+        }
+        else
+        {
+            return trans.Find(path).GetComponent(typeStr);
+        }
+    }
+
+    #endregion
+
+
 
 
     /// <summary>

@@ -5,7 +5,9 @@ LuaMain = {}
 
 function LuaMain.main()
     GlobalManager = global:New();
-    --GlobalManager:Instance():loginSuccess();
+
+    --启动游戏
+    GlobalManager:Instance():LoadScene(SceneType.LoginScene, false);
 end
 
 

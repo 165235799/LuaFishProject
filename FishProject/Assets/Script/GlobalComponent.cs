@@ -66,8 +66,8 @@ public class GlobalComponent : MonoBehaviour
         }
         else
         {
-            //LuaMain();
-            ClientSocket.ConnectServer();
+            LuaMain();
+            //ClientSocket.ConnectServer();
         }
 #endif
     }
